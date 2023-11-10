@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    height: 55px;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(to right, #41155F , #1C08A7);
+    
+}
+
+header a{
+    text-decoration: none;
+    padding: 5px;
+    color: white;
+    padding-left: 50px;
+}
+
+.cabecalho-inicial{
+    margin: 5px;
+    height: 25px;
+    margin-right: 50px;
+}
+
+.cabecalho-inicial a{
+    width: 100px;
+    height: 50px;
+    margin-right: 20px;
+    background-image: linear-gradient(to right, #41155F , #1C08A7);
+    border-radius: 30px;
+}
+
+.cabecalho-inicial select{
+    border-radius: 25px;
+    height: 28px;
+    width: 125px;
+    background-image: linear-gradient(to right, #41155F , #1C08A7);
+    text-align: center;
+    color: white;
+}
+
+.cabecalho-inicial select option{
+    color: black;
+}
