@@ -3,7 +3,7 @@
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <link rel="stylesheet" href="../CSS/estilo.css">
         <link rel="stylesheet" href="../CSS/estilo_cadastro.css">
-
+        <link rel="stylesheet" href="../bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.css">
         <title>Login</title>
     </head>
     <body>
@@ -19,6 +19,7 @@
                     <li><a href="">Relatorios</a>
                     </li>
                 </ul>
+                <a href="http://"><img src="../IMG/logo.png" alt=""></a>
             </div>
         </header>
         <div class="conteudo-cadastro">
@@ -26,30 +27,62 @@
                 <div class="area-cadastro">
                     <form action="#">        
 
-                        <div class="input-box">
-                            <label for="data">Data</label>
-                            <input id="data" type="date" name="data" required>
-                        </div>
-
                         <div class="input-group">
-        
+
                             <div class="input-box">
-                                <label for="seleciona_equi">Equipamento</label>
-                                <input type="text" name="" id="" placeholder="Equipamento">
-                            </div>
-                            <div class="input-box">
-                                <label for="seleciona_equi">Tipo Defeito</label>
-                                <input type="tel" name="" id="" placeholder="Defeito">
+                                <div class="label-n"><label for="data">Nome</label></div>
+                                <input id="data" type="text" name="text" required placeholder="Nome">
                             </div>
         
                             <div class="input-box">
-                                <label for="hora_inicial">Horário Início defeito</label>
-                                <input id="hora_inicial" type="time" name="hora_inicial" required>
+                                <label for="seleciona_equi">E-mail</label>
+                                <input type="text" name="" id="" placeholder="E-mail">
+                            </div>
+                            <div class="input-box">
+                                <label for="seleciona_equi">CPF</label>
+                                <input type="text" name="" id="" placeholder="CPF">
                             </div>
         
                             <div class="input-box">
-                                <label for="hora_fianl">Horário Final Defeito</label>
-                                <input id="hora_fianl" type="time" name="hora_fianl" required>
+                                <label for="hora_inicial">Senha</label>
+                                <input id="senha" type="password" name="senha"a required placeholder="Senha">
+                            </div>
+        
+                            <div class="input-box">
+                                <label for="hora_fianl">Telefone</label>
+                                <input id="telefone" type="text" name="telefone" required placeholder="Telefone">
+                            </div>
+
+                            <div class="input-box">
+                                <label for="sexo">Sexo</label>
+                                <select name="" id="" aria-placeholder="Sexo">
+                                    <option value="">Masculino</option>
+                                    <option value="">Feminino</option>
+                                </select>
+                            </div>
+
+                                    
+                            <div class="input-box">
+                                <label for="hora_fianl">CEP</label>
+                                <input id="cep" type="text" name="cep" required placeholder="CEP">
+                            </div>
+
+                                    
+                            <div class="input-box">
+                                <label for="hora_fianl">Municipio</label>
+                                <input id="=municipio" type="text" name="municipio" required placeholder="Municipio">
+                            </div>
+
+                                    
+                            <div class="input-box">
+                                <label for="hora_fianl">País</label>
+                                <input id="pais" type="text" name="pais" required placeholder="País">
+                            </div>
+
+                                    
+                            <div class="input-box">
+                                <label for="hora_fianl">Bairro</label>
+                                <input id="bairro" type="text" name="bairro" required placeholder="Bairro">
                             </div>
                         </div>
                         <div class="button">
