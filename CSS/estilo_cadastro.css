@@ -71,7 +71,7 @@ header{
 .conteudo-cadastro{
     display: flex;
     width: 89%;
-    height: 89%;
+    height: 100%;
     margin: auto;
     margin-top: 20px;
     border-radius: 60px;
