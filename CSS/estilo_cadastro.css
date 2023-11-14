@@ -5,7 +5,7 @@
 
 body{
     width: 100%;
-    height: 1950px;
+    height: 1850px;
     font-family: "Trebuchet MS";
     background-image: linear-gradient(to right, #41155F , #1C08A7);
 }
@@ -67,9 +67,10 @@ header{
 }
 
 .conteudo-cadastro{
+    padding-top: 50px;
     display: block;
     width: 89%;
-    height: 1800px;
+    height: 1650px;
     margin: 0 auto 0 auto;
     margin-top: 10px;
     border-radius: 60px;
@@ -83,12 +84,12 @@ article{
 
 .area-cadastro{
     margin: auto;
-    height: 1800px;
+    height: 1650px;
     width: 1320;
 }
 
 .area-cadastro h1{
-    display: flex;
+    display: block;
 }
 
 
@@ -105,7 +106,9 @@ article{
 }
 
 .input-group {
-    width: 450px;
+    width: 790px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -117,6 +120,7 @@ article{
 
 .input-box label{
     margin-right: 50px;
+    display: inline;
 }
 
 .input-box input {
@@ -155,12 +159,13 @@ article{
 }
 
 .textGra textarea{
-    width: 700px;
+    width: 790px;
     height: 120px;
     border-radius: 40px;
-    padding-left: 14px;
+    padding-left: 25px;
 }
 
 hr{
-    border: 15px solid black;
+    width: 89%;
+    margin-left: 65px;
 }
