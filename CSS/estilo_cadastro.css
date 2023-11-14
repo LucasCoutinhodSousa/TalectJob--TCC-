@@ -5,7 +5,7 @@
 
 body{
     width: 100%;
-    height: 100%;
+    height: 1950px;
     font-family: "Trebuchet MS";
     background-image: linear-gradient(to right, #41155F , #1C08A7);
 }
@@ -14,7 +14,6 @@ header{
     display: flex;
     width: 100%;
     background-image: linear-gradient(to right, #41155F , #1C08A7);
-    border: 1px solid red;
 }
 
 .conteudo{
@@ -24,7 +23,6 @@ header{
     margin: auto;
     margin-top: 100px;
     border-radius: 30px;
-    border: 1px solid red;
 }
 
 .conteudo article .area_login, form{
@@ -69,56 +67,52 @@ header{
 }
 
 .conteudo-cadastro{
-    display: flex;
+    display: block;
     width: 89%;
-    height: 100%;
-    margin: auto;
-    margin-top: 20px;
+    height: 1800px;
+    margin: 0 auto 0 auto;
+    margin-top: 10px;
     border-radius: 60px;
     background: white;
 }
 
 article{
-    margin-top: 110px;
     width: 89%;
-    height: 89%;
-    margin-left: 110px ;
+    height: 100%;
 }
 
 .area-cadastro{
-    margin-right: 300px;
-    width: 1200px;
-    border: 1px solid red;
+    margin: auto;
+    height: 1800px;
+    width: 1320;
+}
+
+.area-cadastro h1{
+    display: flex;
 }
 
 
 .area-cadastro label{
-    color: black;
+    color: rgb(54, 51, 51);
     margin-bottom: 5px;
     margin-top: 8px;
 }
 
 .area-cadastro input{
-    float: inline-end;
-    display: block;
     width: 280px;
     height: 35px;
     margin-top: 8px;
-    border: 1px solid black;
 }
 
 .input-group {
-    display: flex;
-    flex-wrap: wrap;
+    width: 450px;
     justify-content: space-between;
-    border: 1px solid red;
 }
 
 .input-box {
     display: flex;
     flex-direction: column;
     margin-bottom: 1.1rem;
-    border: 1px solid red;
 }
 
 .input-box label{
@@ -148,6 +142,7 @@ article{
     display: flex;
     flex-wrap: wrap;
     margin-right: 10px;
+    margin: auto;
 }
 
 .button input{
@@ -155,11 +150,17 @@ article{
     margin-right: 8px;
     border-radius: 15px;
 }
-
-.cor input{
-    background: #009F3D;
-}
-
 .label-n{
     display: inline;
+}
+
+.textGra textarea{
+    width: 700px;
+    height: 120px;
+    border-radius: 40px;
+    padding-left: 14px;
+}
+
+hr{
+    border: 15px solid black;
 }
