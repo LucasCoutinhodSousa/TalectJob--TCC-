@@ -26,10 +26,10 @@
             </div>
             <div id="social_media">
                 <a href="">
-                    <img src="assets/imgs/icons8-facebook-48.png" alt="facebook">
+                    <img src="../img/facebook.jpg" alt="facebook">
                 </a>
                 <a href="">
-                    <img src="assets/imgs/icons8-google-logo-48.png" alt="facebook">
+                    <img src="../img/gmail.jpg" alt="facebook">
                 </a>
                 <a href="">
                     <img src="assets/imgs/icons8-instagram-48.png" alt="facebook">
@@ -69,6 +69,6 @@
             </button>
         </form>
     </main>
-    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script type="text/javascript" src="../JV/script.js"></script>
 </body>
 </html>
