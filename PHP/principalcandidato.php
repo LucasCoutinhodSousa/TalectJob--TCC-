@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=h, initial-scale=1.0">
     <title>principalcandidato</title>
-    <link rel="stylesheet" href="principalcandidato.css">
+    <link rel="stylesheet" href="../CSS/principalcandidato.css">
 </head>
 <body>
     <div class="container">
