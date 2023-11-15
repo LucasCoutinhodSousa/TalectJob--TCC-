@@ -1,0 +1,122 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+}
+
+.conteudo1 {
+    
+    flex: 1;
+    background-color: purple;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 15%;
+    
+}
+
+.conteudo1 button{
+    width: 200px;
+    margin: 0 auto 0 auto;
+}
+
+
+.conteudo1 h1{
+    margin-top: -320px;
+}
+
+.conteudo2 {
+    flex: 1;
+    background-color: white;
+}
+
+.conteudo2 h1{
+    margin-top: 55px;
+    margin-left: 100px;
+    font-size: 45px;
+}
+
+.conteudo2 divBusca{
+    background-color:#E0EEEE;
+    border:solid 2px #5F9EA0;
+    border-radius:10px;
+    width:10px;
+    height:32px;
+    margin-left: 100px;
+  }
+  
+  #txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-size:18px;
+    /*border:none;*/
+    height:32px;
+    width:500px;
+    border-style: solid;
+    border-width: 2px;
+    
+  }
+  
+  #btnBusca{
+    border:none;
+    float:left;
+    height:32px;
+    border-radius:0 40px 40px 0;
+    width:100px;
+    font-weight:bold;
+    background:#41155f;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    border-color: black;
+  }
+  
+  #bntBusca:hover{
+    transform: scale(1.05);
+}
+
+  
+    #divBusca img{
+    float:left;
+  }
+
+#Perfil {
+    
+    font-size: 24px;
+    font-weight: bold;
+    padding: 8px ;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    border: none;
+    cursor: pointer;   
+}
+
+.perfil:hover{
+    transform: scale(1.05);
+}
+
+
+#PortalVagas{
+    font-size: 24px;
+    font-weight: bold;
+    padding: 8px ;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    border: none;
+}
+
+#Candidaturas{
+    font-size: 24px;
+    font-weight: bold;
+    padding: 8px ;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    border: none;
+}
