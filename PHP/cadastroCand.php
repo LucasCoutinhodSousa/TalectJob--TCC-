@@ -6,12 +6,13 @@ include('conexao.php');
 
 try{
     if(isset($_GET['nome'], $_GET['email'], $_GET['cpf'], $_GET['senha'], $_GET['telefone'], $_GET['sexo'], $_GET['cep'], $_GET['municipio'],
-     $_GET['pais'], $_GET['bairro'], $_GET['estado'], $_GET['estado'], $_GET['rua'], $_GET['empresa'], $_GET['profInicio'], $_GET['cargo'], $_GET['profFinal'],
-      $_GET['profDescricao'], $_GET['formacao'], $_GET['instituicao'], $_GET['status'], $_GET['acadInicio'], $_GET['curso'], $_GET['acadFinal'], $_GET['acadDescricao'])){
+     $_GET['pais'], $_GET['bairro'], $_GET['estado'], $_GET['rua'], $_GET['empresa'], $_GET['profInicio'], $_GET['cargo'], $_GET['profFinal'],
+      $_GET['profDescricao'], $_GET['formacao'], $_GET['instituicao'], $_GET['status'], $_GET['acadInicio'], $_GET['curso'], $_GET['acadFim'], $_GET['acadDescricao'])){
         $nome = $_GET['nome'];
         $email = $_GET['email'];
         $cpf = $_GET['cpf'];
         $senha = $_GET['senha'];
+        $telefone = $_GET['telefone'];
         $sexo = $_GET['sexo'];
         $cep = $_GET['cep'];
         $municipio = $_GET['municipio'];
@@ -29,7 +30,7 @@ try{
         $status = $_GET['status'];
         $acadInicio = $_GET['acadInicio'];
         $curso = $_GET['curso'];
-        $acadFinal = $_GET['acadFinal'];
+        $acadFinal = $_GET['acadFim'];
         $acadDescricao = $_GET['acadDescricao'];
     }else{
         echo 'Nao definidas';
