@@ -23,25 +23,29 @@ body{
     background: white;
     width: 50%;
     height: 707px;
-    align-items: center;
+    display: flex;
 }
 
 .botoes{
+    display: flex;
     margin-top: 100px;
     text-align: center;
+    width: 100%;
     border: 1px solid red;
-    height: 500px;
+    word-wrap:initial;
 }
 
 .botoes a{
-    width: 700px;
-    background: #41155F;
+   
+    width: 400px;
+    height: 100px;
     border-radius: 20px;
-    margin-top: 10px;
-}
-
-.acessos a{
+    background: #41155F;
     color: white;
     text-decoration: none;
-    width: 700px ;
+    border: 1px solid red;
+    border-bottom: none;
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 10px;
 }
