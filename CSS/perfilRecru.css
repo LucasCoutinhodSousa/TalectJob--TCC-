@@ -22,15 +22,26 @@ body{
 .acessos{
     background: white;
     width: 50%;
+    height: 707px;
+    align-items: center;
 }
 
-.acessos button{
-    border-bottom: none;
+.botoes{
+    margin-top: 100px;
+    text-align: center;
+    border: 1px solid red;
+    height: 500px;
+}
+
+.botoes a{
+    width: 700px;
     background: #41155F;
-    margin: auto;
+    border-radius: 20px;
+    margin-top: 10px;
 }
 
 .acessos a{
     color: white;
     text-decoration: none;
+    width: 700px ;
 }
