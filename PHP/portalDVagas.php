@@ -1,3 +1,9 @@
+<?php
+    include('conexao.php');
+    $query = dbh->prepare('SELECT * FROM portalVagas')
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

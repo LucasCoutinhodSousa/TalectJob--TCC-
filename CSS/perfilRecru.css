@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: linear-gradient(to right, #41155F , #1C08A7);
+    width: 100%;
+    height: 100%;
+}
+
+.conteiner{
+    display: flex;
+}
+
+.perfil{
+    width: 50%;
+    height: 100%;
+    background-image: linear-gradient(to right, #41155F , #1C08A7);
+}
+
+.acessos{
+    background: white;
+    width: 50%;
+}
+
+.acessos button{
+    border-bottom: none;
+    background: #41155F;
+    margin: auto;
+}
+
+.acessos a{
+    color: white;
+    text-decoration: none;
+}
