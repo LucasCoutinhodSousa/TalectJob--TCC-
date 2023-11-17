@@ -32,7 +32,7 @@
                     <img src="../img/gmail.jpg" alt="facebook">
                 </a>
                 <a href="">
-                    <img src="assets/imgs/icons8-instagram-48.png" alt="facebook">
+                    <img src="../img/Instagram.jpg" alt="instagram">
                 </a>
             </div>
             <div id="inputs">
@@ -59,7 +59,7 @@
                 </a>
             </div>
             <div id="cadastro">
-                <a href="a">
+                <a href="../HTMl/cadastro.html">
                     Cadastre-se
                 </a>
             </div>
