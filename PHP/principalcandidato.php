@@ -12,7 +12,7 @@
 
         <div class="conteudo1">
 
-            <h1>:</h1>
+            <h1>Nome:</h1>
             
             <button class="perfil" type="submit" id="Perfil">Perfil</button>
             <button type="submit" id="PortalVagas">Portal de vagas</button>
