@@ -1,17 +1,11 @@
-<?php
-    include('conexao.php');
-    $query = dbh->prepare('SELECT * FROM portalVagas');
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/styleInicial.css">
-    <link rel="stylesheet" href="../CSS/portalVagas.css">
-    <title>Portal de Vagas</title>
+    <link rel="stylesheet" href="../CSS/candidatura.css">
+    <title>Candidaturas</title>
 </head>
 <body>
     <header>
@@ -27,27 +21,11 @@
         </div>
     </header>
     <div class="conteiner">
-        <div class="filto-to">
-            <div class="filtro">
-                <h1>Filtro</h1>
-                <select name="" id="" aria-placeholder="Filtro">
-                    <option value="">Local</option>
-                    <option value="">Local</option>
-                    <option value="">Local</option>
-                </select>
-                <select name="" id="">
-                    <option value="">Área profissional</option>
-                    <option value="">Área profissional</option>
-                    <option value="">Área profissional</option>
-                </select>
-                <select name="" id="">
-                    <option value="">Faixa Salarial</option>
-                    <option value="">Faixa Salarial</option>
-                    <option value="">Faixa Salarial</option>
-                </select>
-            </div>
-        </div>
         <div class="vagas-to">
+            <div class="links">
+                <a href="">Em Andamento</a>
+                <a href="" class="linha">Finalizada</a>
+            </div>
             <div class="vagas">
                 <h1>Analista de Sistema</h1>
                 <h2>São Paulo</h2>
