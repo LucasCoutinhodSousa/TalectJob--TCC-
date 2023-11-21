@@ -5,7 +5,7 @@ use tcc;
 CREATE TABLE cadasCand (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255),
-    email VARCHAR(255),
+    email VARCHAR(255) unique,
     cpf VARCHAR(140),
     senha VARCHAR(255),
     telefone VARCHAR(15),
@@ -29,5 +29,17 @@ CREATE TABLE cadasCand (
     fim_academico VARCHAR(100),
     descricao_projetos TEXT
 );
+
+create table cadasEmpre(
+	id int auto_increment primary key unique,
+    cnpj varchar(100),
+    razaoSoc varchar(100),
+    nomeFant varchar(100),
+    email varchar(100) unicode not null,
+    estadualIns varchar(100),
+    senha varchar(100),
+    
+);
+
 
 select*from cadasCand;
