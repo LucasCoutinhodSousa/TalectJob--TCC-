@@ -74,4 +74,11 @@ $query->execute(array(
 ));
 
 echo 'Inseridas com sucesso';
+
+if ($query->rowCount() > 0) {
+    echo 'Cadastro realizado com sucesso.';
+    header('Location: ../HTML/perfilRecrutador.html');
+} else {
+    echo 'Erro ao cadastrar. Verifique os dados fornecidos.';
+}
 ?>
