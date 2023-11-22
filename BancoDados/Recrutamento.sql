@@ -37,9 +37,17 @@ create table cadasEmpre(
     nomeFant varchar(100),
     email varchar(100) unicode not null,
     estadualIns varchar(100),
-    senha varchar(100),
-    
+    senha varchar(100)    
 );
 
+create table cadasVagas(
+	id int auto_increment primary key unique,
+    cargo varchar(100),
+    localVaga varchar(100),
+    descricaoVaga TEXT
+);
+
+INSERT INTO cadasVagas (cargo, localVaga, descricaoVaga) VALUES ('Desenvolverdor', 'São Paulo', 'Ira desenvolver Front END');
 
 select*from cadasCand;
+select*from cadasVagas;
