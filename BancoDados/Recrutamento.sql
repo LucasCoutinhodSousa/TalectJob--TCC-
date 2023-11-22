@@ -37,7 +37,13 @@ create table cadasEmpre(
     nomeFant varchar(100),
     email varchar(100) unicode not null,
     estadualIns varchar(100),
-    senha varchar(100)    
+    senha varchar(100), 
+    cep varchar(100),
+    municipio varchar(100),
+    pais varchar(100),
+    bairro varchar(100),
+    estado varchar(100),
+    rua varchar(100)    
 );
 
 create table cadasVagas(
