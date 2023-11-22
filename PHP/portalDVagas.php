@@ -1,7 +1,7 @@
 <?php
     include('conexao.php');
-    $query = dbh->prepare('SELECT * FROM portalVagas');
-    
+    $query = dbh->prepare('SELECT * FROM cadasVagas');
+
 ?>
 
 <!DOCTYPE html>
