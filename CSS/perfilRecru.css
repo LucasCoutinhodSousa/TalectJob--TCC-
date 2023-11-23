@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Nunito', sans-serif;
 }
 
 body{
@@ -15,22 +16,56 @@ body{
 
 .perfil{
     width: 50%;
-    height: 100%;
+    height: 600px;
     background-image: linear-gradient(to right, #41155F , #1C08A7);
+    text-align: center ;
+    padding-top: 100px;
 }
 
-.acessos{
+.perfil img{
+    border-radius: 120px;
+}
+
+.perfil h2{
+    margin-top: 10px;
+}
+
+.acessos {
     background: white;
     width: 50%;
+    height: 707px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os elementos quebrem para a próxima linha */
 }
 
-.acessos button{
-    border-bottom: none;
-    background: #41155F;
+.botoes {
     margin: auto;
+    display: flex;
+    flex-basis: 48%; /* Largura ajustada para permitir dois elementos por linha */
+    margin-top: 100px; /* Reduzi a margem superior para evitar muito espaço entre os blocos */
+    box-sizing: border-box; /* Leva em consideração a largura da borda e do preenchimento */
+    height: 100px;
+    margin-bottom: -220px;
+    text-align: center;
 }
 
-.acessos a{
+.botoes a {
+     /* Faz com que os links ocupem toda a largura do elemento pai (.botoes) */
+    width: 100%;
+    height: 100px;
+    
+border-radius: 20px;
+    background: #41155F;
     color: white;
     text-decoration: none;
+    margin-top: 10px;
+    margin: auto;
+    line-height: 95px;
+}
+
+.centralizado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }

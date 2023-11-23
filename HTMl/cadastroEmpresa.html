@@ -1,0 +1,114 @@
+<html>
+    <head lang="pt-BR">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" href="../CSS/estilo.css">
+        <link rel="stylesheet" href="../CSS/cadastroEmpre.css">
+        <title>Login</title>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="http://"><img src="../IMG/logo.png" alt=""></a>
+            </div>
+            <div class="espacamento">
+
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="">Relatorios</a>
+                    </li>
+                </ul>
+                <a href="http://"><img src="../IMG/logo.png" alt=""></a>
+            </div>
+        </header>
+        <div class="conteudo-cadastro">
+            <article>
+                <div class="area-cadastro">
+                    <form action="../PHP/cadastroEmpresa.php" method="get">    
+
+                        <h1>Dados Empresarial</h1>
+
+                        <div class="input-group">
+
+                            <div class="input-box">
+                                <div class="label-n"><label for="CNPJ">CNPJ</label></div>
+                                <input id="CNPJ" type="text" name="cnpj" required placeholder="CNPJ">
+                            </div>
+        
+                            <div class="input-box">
+                                <label for="Razão Social">Razão Social</label>
+                                <input type="text" name="razao_social" id="Razão Social" placeholder="Razão Social">
+                            </div>
+                            <div class="input-box">
+                                <label for="Nome Fantasia">Nome Fantasia</label>
+                                <input type="text" name="nome_Fant" id="" placeholder="Nome Fantasia">
+                            </div>
+        
+                            <div class="input-box">
+                                <label for="E-mail">E-mail</label>
+                                <input id="E-mail" type="email" name="email" required placeholder="E-mail">
+                            </div>
+        
+                            <div class="input-box">
+                                <label for="Inscrição Estadual">Inscrição Estadual</label>
+                                <input id="Inscrição Estadual" type="text" name="inscricao_Est" required placeholder="Inscrição Estadual">
+                            </div>
+
+                            <div class="input-box">
+                                <label for="Senha">Senha</label>
+                                <input id="Senha" type="password" name="senha" required placeholder="Senha">
+                            </div>
+
+                        </div>
+                        <hr>
+                        <h1>Endereço</h1>
+                        <div class="input-group">
+
+                            
+                            <div class="input-box">
+                                <label for="hora_fianl">CEP</label>
+                                <input id="CEP" type="text" name="cep" required placeholder="CEP">
+                            </div>
+
+                                    
+                            <div class="input-box">
+                                <label for="hora_fianl">Municipio</label>
+                                <input id="=Municipio" type="text" name="municipio" required placeholder="Municipio">
+                            </div>
+
+                                    
+                            <div class="input-box">
+                                <label for="hora_fianl">País</label>
+                                <input id="pais" type="text" name="pais" required placeholder="País">
+                            </div>
+
+                                    
+                            <div class="input-box">
+                                <label for="hora_fianl">Bairro</label>
+                                <input id="bairro" type="text" name="bairro" required placeholder="Bairro">
+                            </div>
+
+                                    
+                            <div class="input-box">
+                                <label for="hora_fianl">Estado</label>
+                                <input id="estado" type="text" name="estado" required placeholder="Estado">
+                            </div>
+
+                                    
+                            <div class="input-box">
+                                <label for="hora_fianl">Rua</label>
+                                <input id="rua" type="text" name="rua" required placeholder="Rua">
+                            </div>
+
+                        </div>
+                       
+                        <div class="input-group">
+                            <div class="button">
+                                <input type="submit" value="Cadastrar">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </article>
+        </div>
+    </body>

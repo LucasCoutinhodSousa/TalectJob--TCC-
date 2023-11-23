@@ -32,7 +32,11 @@
                     <img src="../img/gmail.jpg" alt="facebook">
                 </a>
                 <a href="">
+<<<<<<< HEAD
                     <img src="../img/Instagram.jpg" alt="instagram">
+=======
+                    <img src="../img/Instagram.jpg" alt="Instagram">
+>>>>>>> 2a0fcda811f7a1b49032f9eb358f26f48d1439f0
                 </a>
             </div>
             <div id="inputs">
@@ -59,7 +63,11 @@
                 </a>
             </div>
             <div id="cadastro">
+<<<<<<< HEAD
                 <a href="../HTMl/cadastro.html">
+=======
+                <a href="../HTML/cadastro.html">
+>>>>>>> 2a0fcda811f7a1b49032f9eb358f26f48d1439f0
                     Cadastre-se
                 </a>
             </div>
