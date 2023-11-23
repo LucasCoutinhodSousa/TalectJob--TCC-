@@ -57,3 +57,4 @@ INSERT INTO cadasVagas (cargo, localVaga, descricaoVaga) VALUES ('Desenvolverdor
 
 select*from cadasCand;
 select*from cadasVagas;
+select*from cadasEmpre;
