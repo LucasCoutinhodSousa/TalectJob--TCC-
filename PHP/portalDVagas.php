@@ -33,6 +33,11 @@
             <div class="filtro">
                 <h1>Filtro</h1>
                 <select name="" id="" aria-placeholder="Filtro">
+                    <?php
+                        foreach($vagas as $local){
+                            echo '<option>'.$local['localVaga'].'</option>';
+                        }
+                    ?>
                     <option value="">Local</option>
                     <option value="">Local</option>
                     <option value="">Local</option>
@@ -54,7 +59,7 @@
         <?php
         foreach($vagas as $vaga){
             echo '<div class="vagas">';
-            echo  '<a href="../HTML/Inicial.html">';
+            echo  '<a href="../PHP/vaga.php">';
             echo  '<h1>'.$vaga['cargo'].'</h1>';
             echo  '<h2>'.$vaga['localVaga'].'</h2>';
             echo    '<p>'.$vaga['descricaoVaga'].'</p>';
