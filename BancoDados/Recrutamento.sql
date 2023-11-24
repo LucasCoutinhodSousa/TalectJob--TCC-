@@ -55,6 +55,9 @@ create table cadasVagas(
 
 INSERT INTO cadasVagas (cargo, localVaga, descricaoVaga) VALUES ('Desenvolverdor', 'São Paulo', 'Ira desenvolver Front END');
 INSERT INTO cadasVagas (cargo, localVaga, descricaoVaga) VALUES ('Analista de Dadod', 'São Paulo', 'Ira Analisar Dados');
+INSERT INTO cadasVagas (cargo, localVaga, descricaoVaga) VALUES ('Analista de Dadod', 'São Paulo', 'Domínio de configurações, recomendações e boas práticas de segurança para sistemas em nuvem; Experiência com tecnologia
+                Cloud (IaaS, PaaS, DBaaS, SaaS); Conhecimento avançado nos sistemas operacionais Windows e Linux; Domínio de requisitos
+                não funcionais (ex: desempenho, disponibilidade, segurança, interoperabilidade);');
 
 select*from cadasCand;
 select*from cadasVagas;
