@@ -54,6 +54,7 @@ create table cadasVagas(
 );
 
 INSERT INTO cadasVagas (cargo, localVaga, descricaoVaga) VALUES ('Desenvolverdor', 'São Paulo', 'Ira desenvolver Front END');
+INSERT INTO cadasVagas (cargo, localVaga, descricaoVaga) VALUES ('Analista de Dadod', 'São Paulo', 'Ira Analisar Dados');
 
 select*from cadasCand;
 select*from cadasVagas;

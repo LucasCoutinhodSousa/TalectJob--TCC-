@@ -1,7 +1,9 @@
 <?php
     include('conexao.php');
-    $query = dbh->prepare('SELECT * FROM cadasVagas');
+    $query = $dbh->prepare('SELECT * FROM cadasVagas');
+    $query->execute();
 
+    $vagas = $query->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -48,16 +50,19 @@
             </div>
         </div>
         <div class="vagas-to">
-            <div class="vagas">
-                <h1>Analista de Sistema</h1>
-                <h2>São Paulo</h2>
-                <p>Domínio de configurações, recomendações e boas práticas de segurança para sistemas em nuvem; Experiência com tecnologia
-                Cloud (IaaS, PaaS, DBaaS, SaaS); Conhecimento avançado nos sistemas operacionais Windows e Linux; Domínio de requisitos
-                não funcionais (ex: desempenho, disponibilidade, segurança, interoperabilidade);
-                </p>
-            </div>
-            
-            <div class="vagas">
+
+        <?php
+        foreach($vagas as $vaga){
+            echo '<div class="vagas">';
+            echo  '<a href="../HTML/Inicial.html">';
+            echo  '<h1>'.$vaga['cargo'].'</h1>';
+            echo  '<h2>'.$vaga['localVaga'].'</h2>';
+            echo    '<p>'.$vaga['descricaoVaga'].'</p>';
+            '</a>';
+           echo '</div>';
+            }
+        ?>
+            <!--<div class="vagas">
                 <h1>Analista de Sistema</h1>
                 <h2>São Paulo</h2>
                 <p>Domínio de configurações, recomendações e boas práticas de segurança para sistemas em nuvem; Experiência com tecnologia
@@ -73,7 +78,7 @@
                 Cloud (IaaS, PaaS, DBaaS, SaaS); Conhecimento avançado nos sistemas operacionais Windows e Linux; Domínio de requisitos
                 não funcionais (ex: desempenho, disponibilidade, segurança, interoperabilidade);
                 </p>
-            </div>
+            </div>-->
         </div>
     </div>
 </body>
