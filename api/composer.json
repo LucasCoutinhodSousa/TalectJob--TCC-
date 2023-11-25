@@ -1,11 +1,10 @@
 {
     "autoload": {
         "psr-4": {
-            "Api\\Websocket\\": "src"
+            "Api\\Websocket\\": "src/"
         }
     },
-
     "require": {
-        "cboden/ratchet": "*"
+        "cboden/ratchet": "^0.4.4"
     }
 }
