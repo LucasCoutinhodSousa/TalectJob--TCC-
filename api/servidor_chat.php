@@ -25,3 +25,4 @@ $server = IoServer::factory(
 
 // Iniciar o servidor e começar a escutar as conexões.
 $server->run();
+echo 'teste';
