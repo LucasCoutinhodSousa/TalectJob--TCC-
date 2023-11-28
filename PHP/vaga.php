@@ -6,11 +6,11 @@
     $query = $dbh->prepare('SELECT cargo, localVaga, descricaoVaga FROM cadasVagas WHERE id=:ididvaga');
 
     //SELECT id FROM cadasVagas WHERE id=:id'
-    $query->execute();
+    $query->execute(array(
+        ':ididvaga' => $idvaga
+    ));
 
-    $vaga = $qury->fetchAll();
-
-    echo $vaga;
+    $vaga = $query->fetchAll();
     
 ?>
 
@@ -24,13 +24,13 @@
 </head>
 <body>
     <div class="vagas-t">
-        <div class="vagas-t">
-            <h1>Analista de Sistema</h1>
-            <h2>São Paulo</h2>
-            <p>Domínio de configurações, recomendações e boas práticas de segurança para sistemas em nuvem; Experiência com tecnologia
-            Cloud (IaaS, PaaS, DBaaS, SaaS); Conhecimento avançado nos sistemas operacionais Windows e Linux; Domínio de requisitos
-            não funcionais (ex: desempenho, disponibilidade, segurança, interoperabilidade);
-            </p>
+        <div class="vagas-t"><?php
+        foreach($vaga as $vaga){
+            echo '<h1>'.$vaga['cargo'].'</h1>';
+            echo '<h2>'.$vaga['localVaga'].'</h2';
+            echo '<p>'.$vaga['descricaoVaga'].'</p>';
+        }
+        ?>
         </div>
     </div>
 </body>
