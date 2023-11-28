@@ -24,14 +24,15 @@
 </head>
 <body>
     <div class="vagas-t">
-        <div class="vagas-t"><?php
+        <?php
         foreach($vaga as $vaga){
+            echo '<div class="vagas">';
             echo '<h1>'.$vaga['cargo'].'</h1>';
             echo '<h2>'.$vaga['localVaga'].'</h2';
-            echo '<p>'.$vaga['descricaoVaga'].'</p>';
+            echo '<h1>'.$vaga['descricaoVaga'].'</h1>';
+            echo '</div>';
         }
         ?>
-        </div>
     </div>
 </body>
 </html>

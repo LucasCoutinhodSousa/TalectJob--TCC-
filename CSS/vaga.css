@@ -1,11 +1,11 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Nunito', sans-serif;
 }
 
 body{
     background-image: linear-gradient(to right, #41155F , #1C08A7);
+    font-family: 'Nunito', sans-serif;
 }
 
 .conteiner{
@@ -17,7 +17,7 @@ body{
 .filto-to{
     display: flex;
     background: white;
-    width: 500px;
+    width: 50%;
     height: 600px;
     margin-left: 50px;
     border-radius: 50px;
@@ -43,31 +43,34 @@ body{
 }
 
 
-.vagas-t{
-
+.vagas{
     margin: 0 auto;
     margin-top: 20px;
     margin-left: 8px;
     border-radius: 20px;
     background: white;
-    height: 600px;
+    height: 500px;
     text-align: center;
     margin-right: 8px;
 }
 
-.vagas-t p{
+.vagas p{
     padding-top: 20px;
+    display: flex;
+    border: 1px solid red;
+    margin-top: 50px;
 }
 
 
 
-.vagas-t h1{
+.vagas h1{
     width: 300px;
     text-align: center;
     margin: auto;
+    border: 1px solid red
 }
 
-.vagas-t h2{
+.vagas h2{
     margin-left: 900px;
     margin-top: -40px;
 }
