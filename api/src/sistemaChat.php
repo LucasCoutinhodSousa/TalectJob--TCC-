@@ -22,7 +22,7 @@ class SistemaChat implements MessageComponentInterface
         // Adicionar o cliente na lista
         $this->cliente->attach($conn);
 
-        //echo "Nova conexão: {$conn->resourceId}. \n\n";
+        echo "Nova conexão: {$conn->resourceId}. \n\n";
     }
 
     // Enviar mensagens para os usuário conectados
@@ -38,7 +38,7 @@ class SistemaChat implements MessageComponentInterface
             }
         }
 
-        //echo "Usuário {$from->resourceId} enviou uma mensagem. \n\n";
+        echo "Usuário {$from->resourceId} enviou uma mensagem. \n\n";
     }
 
     // Desconectar o cliente do websocket
@@ -47,7 +47,7 @@ class SistemaChat implements MessageComponentInterface
         // Fechar a conexão e retirar o cliente da lista
         $this->cliente->detach($conn);
 
-        //echo "Usuário {$conn->resourceId} desconectou. \n\n";
+        echo "Usuário {$conn->resourceId} desconectou. \n\n";
     }
 
     // Função que será chamada caso ocorra algum erro no websocket
@@ -56,6 +56,6 @@ class SistemaChat implements MessageComponentInterface
         // Fechar conexão do cliente
         $conn->close();
 
-        //echo "Ocorreu um erro: {$e->getMessage()} \n\n";
+        echo "Ocorreu um erro: {$e->getMessage()} \n\n";
     }
 }
