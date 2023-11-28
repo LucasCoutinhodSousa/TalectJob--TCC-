@@ -1,5 +1,21 @@
+<?php
+
+    include('conexao.php');
+    $idvaga = $_GET['id'];
+
+    $query = $dbh->prepare('SELECT cargo, localVaga, descricaoVaga FROM cadasVagas WHERE id=:ididvaga');
+
+    //SELECT id FROM cadasVagas WHERE id=:id'
+    $query->execute();
+
+    $vaga = $qury->fetchAll();
+
+    echo $vaga;
+    
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

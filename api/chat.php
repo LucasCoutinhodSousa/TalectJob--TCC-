@@ -26,7 +26,7 @@ ob_start(); // Limpar o buffer de saida para evitar erro de redirecionamento
 
         // Realizar a conexão com websocket
         ws.onopen = (e) => {
-            //console.log('Conectado!');
+            console.log('Conectado!');
         }
     </script>
 

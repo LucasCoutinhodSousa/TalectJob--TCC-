@@ -14,6 +14,7 @@ require __DIR__ . './vendor/autoload.php';
 // new WsServer(): classe responsável por fornecer funcionalidades WebSocket adicionais, permitindo a comunicação bidirecional em tempo real.
 // new SistemaChat(): classe criada para lidar com eventos relacionados ao WebSocket, como receber mensagens, abrir conexões, fechar conexões, entre outras funcionalidades
 // 8080: porta em que o servidor WebSocket será executado
+echo 'teste';
 $server = IoServer::factory(
     new HttpServer(
         new WsServer(
@@ -25,4 +26,3 @@ $server = IoServer::factory(
 
 // Iniciar o servidor e começar a escutar as conexões.
 $server->run();
-echo 'teste';
