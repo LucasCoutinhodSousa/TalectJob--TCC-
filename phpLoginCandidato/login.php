@@ -29,7 +29,7 @@ include_once ('../PHP/conexao.php');
            // var_dump($dados);
            $query_usuario = "SELECT id, nome, usuario, senha 
            FROM loginCandidato
-           WHERE usuario = :usuario
+           WHERE usuario = :usuario 
            LIMIT 1";
 
            $result_usuario = $dbh->prepare($query_usuario);

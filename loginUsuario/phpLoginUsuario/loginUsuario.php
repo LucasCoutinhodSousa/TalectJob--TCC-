@@ -9,10 +9,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>telaLoginEmpresa</title>
+    <title>loginweb</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   
-    <link rel="stylesheet" href="../CSS/telaLoginEmpresa.css">
+    
+    <link rel="stylesheet" href="../cssLoginUsuario/style.css">
 </head>
 <body>
     <main id="container">
@@ -26,10 +26,10 @@
             </div>
             <div id="social_media">
                 <a href="">
-                    <img src="../img/facebook.jpg" alt="facebook">
+                    <img src="/img/facebook.jpg" alt="facebook">
                 </a>
                 <a href="">
-                    <img src="../img/gmail.jpg" alt="facebook">
+                    <img src="/img/gmail.jpg" alt="gmail">
                 </a>
                 <a href="">
                     <img src="../img/Instagram.jpg" alt="instagram">
@@ -37,11 +37,11 @@
             </div>
             <div id="inputs">
                 <div class="input-box"></div>
-                <label for="CNPJ">
-                    Cnpj
+                <label for="email">
+                    Email
                     <div class="input-field">
                         <i class="fa-solid fa-envelope"></i>
-                        <input type="CNPJ" id="CNPJ" name="CNPJ" required>
+                        <input type="email" id="email" name="email" required>
                     </div>
                 </label>
             </div>
@@ -54,12 +54,12 @@
                 </div>
             </label>
             <div id="esqueceu_senha">
-                <a href="../HTMl/telaRedefinirSenhaEmpresa.html">
+                <a href="../phpLoginUsuario/redefinirsenha.php">
                     Esqueceu a senha?
                 </a>
             </div>
             <div id="cadastro">
-                <a href="a">
+                <a href="../HTMl/cadastro.html">
                     Cadastre-se
                 </a>
             </div>
@@ -69,6 +69,6 @@
             </button>
         </form>
     </main>
-    <script type="text/javascript" src="../JV/script.js"></script>
+    <script type="text/javascript" src="/JV/script.js"></script>
 </body>
 </html>
