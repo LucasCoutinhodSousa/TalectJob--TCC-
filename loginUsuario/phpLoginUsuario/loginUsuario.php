@@ -26,10 +26,10 @@
             </div>
             <div id="social_media">
                 <a href="">
-                    <img src="/img/facebook.jpg" alt="facebook">
+                    <img src="../img/facebook.jpg" alt="facebook">
                 </a>
                 <a href="">
-                    <img src="/img/gmail.jpg" alt="gmail">
+                    <img src="../img/gmail.jpg" alt="gmail">
                 </a>
                 <a href="">
                     <img src="../img/Instagram.jpg" alt="instagram">
