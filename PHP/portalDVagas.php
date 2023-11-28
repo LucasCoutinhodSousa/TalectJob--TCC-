@@ -59,7 +59,7 @@
         <?php
         foreach($vagas as $vaga){
             echo '<div class="vagas">';
-            echo  '<a href="../PHP/vaga.php">';
+            echo  '<a href="../PHP/vaga.php?id='.$vaga['id'].'">';
             echo  '<h1>'.$vaga['cargo'].'</h1>';
             echo  '<h2>'.$vaga['localVaga'].'</h2>';
             echo    '<p>'.$vaga['descricaoVaga'].'</p>';
