@@ -1,7 +1,7 @@
 <?php
 session_start();
 ob_start();
-include_once 'conexao.php';
+include ('conexaobanco.php');
 
 ?>
 
@@ -20,15 +20,31 @@ include_once 'conexao.php';
         $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
         
 
-       if(!empty($dados['SendRecup'])){
+       if(!empty($dados['SendRecuperar'])){
             var_dump($dados);
 
-            $query_usuario = "SELECT id, nome, usuario, FROM loginCandidato WHERE usuario=:usuario LIMIT 1";
+            $query_usuario = "SELECT id, nome, usuario FROM loginCandidato WHERE usuario=:usuario LIMIT 1";
             $result_usuario = $dbh ->prepare($query_usuario);
             $result_usuario -> bindParam(':usuario', $dados['usuario'], PDO::PARAM_STR);
             $result_usuario -> execute();
 
             if(($result_usuario) AND ($result_usuario->rowCount() !=0)){
+                $row_usuario = $result_usuario -> fetch(PDO::FETCH_ASSOC);
+                $chave_recuperar_senha = password_hash($row_usuario['id'], PASSWORD_DEFAULT);
+              //  echo "chave $chave_recuperar_senha <br>";
+                $query_up_usuario = "UPDATE loginCandidato SET recuperar_senha =:recuperar_senha WHERE id=:id LIMIT 1";
+                $result_up_usuario = $dbh -> prepare($query_up_usuario);
+                $result_up_usuario -> bindParam(':recuperar_senha', $chave_recuperar_senha, PDO::PARAM_STR);
+                $result_up_usuario -> bindParam(':id', $row_usuario['id'], PDO::PARAM_INT);
+
+                if($result_up_usuario ->execute()){
+                    echo "http://localhost/TCC/loginUsuario/phpLoginUsuario/atualizar_senha.php?chave=$chave_recuperar_senha";
+
+                }else{
+                    $_SESSION ['msg'] = "<p style='color: #ff0000' >Erro: Tente novamente";
+                }
+
+
 
             }else{
              $_SESSION ['msg'] = "<p style='color: #ff0000' >Erro: Usuario não encontrado!";

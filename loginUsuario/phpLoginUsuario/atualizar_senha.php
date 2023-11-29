@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="../CSS/style.css">
 
-    <title>Login Dark/Light Mode</title>
+    <title>Atualizar senha</title>
 </head>
 <body>   
     <main id="container">
