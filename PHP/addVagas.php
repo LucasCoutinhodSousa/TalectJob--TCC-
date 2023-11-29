@@ -2,7 +2,7 @@
     include('conexao.php');
 
 try{
-    if(isset($_GET['cargo'], $_GET['localVaga'], $_GET['descrVaga'])){
+    if(isset($_GET['cargo'], $_GET['local'], $_GET['descrVaga'])){
         $cargo = $_GET['cargo'];
         $local = $_GET['local'];
         $descrVaga = $_GET['descrVaga'];
@@ -13,7 +13,7 @@ try{
 }catch(PDOException $e){
 }
 
-$query = $dbh->prepare('INSERT INTO cadasVagas(cargo, localVaga, descricao) VALUES(:cargo, :local, :descrVaga)');
+$query = $dbh->prepare('INSERT INTO cadasVagas(cargo, localVaga, descricaoVaga) VALUES(:cargo, :local, :descrVaga)');
 
 $query->execute(array(
     ':cargo' => $cargo,
