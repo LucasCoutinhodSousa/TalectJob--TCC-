@@ -52,6 +52,16 @@ create table cadasVagas(
     localVaga varchar(100),
     descricaoVaga TEXT
 );
+describe cadasVagas;
+
+alter table cadasVagas add column empresaCada int;
+
+alter table cadasVagas add foreign key (empresaCada)
+references cadasEmpre(id);
+
+select cadasEmpre.nomeFant, cadasVagas.cargo, cadasVagas.localVaga, cadasVagas.descricaoVaga 
+from cadasEmpre join cadasVagas 
+on cadasEmpre.id = cadasVagas.empresaCada;
 
 INSERT INTO cadasVagas (cargo, localVaga, descricaoVaga) VALUES ('Desenvolverdor', 'São Paulo', 'Ira desenvolver Front END');
 INSERT INTO cadasVagas (cargo, localVaga, descricaoVaga) VALUES ('Analista de Dadod', 'São Paulo', 'Ira Analisar Dados');
