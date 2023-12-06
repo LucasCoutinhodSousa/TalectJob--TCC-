@@ -43,7 +43,7 @@ body{
     display: flex;
     flex-basis: 48%; /* Largura ajustada para permitir dois elementos por linha */
     margin-top: 100px; /* Reduzi a margem superior para evitar muito espaço entre os blocos */
-    box-sizing: border-box; /* Leva em consideração a largura da borda e do preenchimento */
+  /* Leva em consideração a largura da borda e do preenchimento */
     height: 100px;
     margin-bottom: -220px;
     text-align: center;

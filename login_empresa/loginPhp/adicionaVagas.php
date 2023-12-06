@@ -1,8 +1,23 @@
+<?php
+    include('conexao.php');
+
+    session_start();
+
+    if(!isset($_SESSION['id'])){
+        header('Location: telaLoginEmpresa.php');
+        exit;
+    }
+
+    $id_Empresa = $_SESSION['id'];
+
+    echo $id_Empresa;
+?>
+
 <html>
     <head lang="pt-BR">
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <link rel="stylesheet" href="../CSS/estilo.css">
-        <link rel="stylesheet" href="../CSS/adicionarVagas.css">
+        <link rel="stylesheet" href="../../CSS/adicionarVagas.css">
         <link rel="stylesheet" href="../bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.css">
         <title>Login</title>
     </head>
@@ -25,7 +40,7 @@
         <div class="conteudo-cadastro">
             <article>
                 <div class="area-cadastro">
-                    <form action="../PHP/addVagas.php" method="get">    
+                    <form action="../../PHP/addVagas.php" method="get">    
                         <div class="input-group">
 
                             <h1>Adicionar Vagas</h1>

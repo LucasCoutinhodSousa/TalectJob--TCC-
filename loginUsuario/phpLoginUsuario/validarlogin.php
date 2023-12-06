@@ -1,11 +1,13 @@
 <?php
 
     //Inclusão da conexão
-    include("conexao.php");
+    include("conexaobanco.php");
 
     //Criando variaveis para realização da consulta ao banco de dados
     $login = $_POST['email'];
     $senha = $_POST['senha'];
+
+    
 
     //Verificando se o usuário digitou os campos obrigatórios
     echo empty($login);
@@ -16,7 +18,7 @@
         //Tentando realizar consulta, o try é importante pois o erro não exibido por padrão ao usuário
         try{
             // Preparando instrução para a consulta do banco de dados
-            $query = $dbh->prepare("SELECT id,email,senha FROM logincandidato WHERE email=:email AND senha=:senha;");
+            $query = $dbh->prepare("SELECT id,email,senha FROM cadasCand WHERE email=:email AND senha=:senha;");
             $query->execute(array(
                 ':email' => $login,
                 ':senha' => $senha
@@ -34,7 +36,7 @@
             }
             $_SESSION['id'] = $resultado['id'];
             $_SESSION['nome'] = $resultado['nome'];
-            header('Location: ../principalcandidato.php');
+            header('Location: ./principalcandidato.php');
         }
 
         }catch(Exception $e){

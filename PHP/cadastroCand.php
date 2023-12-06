@@ -37,7 +37,6 @@ try{
         die();
     }
 }catch(PDOException $e){
-    throw new MyDatabaseException( $Exception->getMessage( ) , (int)$Exception->getCode( ) );
 }
 
 $query = $dbh->prepare('INSERT INTO cadasCand  (nome, email, cpf, senha, telefone, sexo, cep, municipio, pais, bairro, estado, rua, empresa,
@@ -45,6 +44,7 @@ inicio_profissional, cargo, final_profissional, descricao_profissional, formacao
 ) VALUES(:nome, :email, :cpf, :senha, :telefone, :sexo, :cep, :municipio, :pais, :bairro, :estado,
     :rua, :empresa, :profInicio, :cargo, :profFinal, :profDescricao, :formacao, :instituicao,
     :status, :acadInicio, :curso, :acadFinal, :acadDescricao)');
+
 
 $query->execute(array(
     ':nome' => $nome,

@@ -16,7 +16,7 @@
 </head>
 <body>
     <main id="container">
-        <form id="login_form" method="POST" action="./bd/validarLogin.php">
+        <form id="login_form" method="POST" action="../loginPhp/validarLoginEmpresa.php">
             <div id="form_header">
                 <h1>Login</h1>
                 
@@ -41,7 +41,7 @@
                     Cnpj
                     <div class="input-field">
                         <i class="fa-solid fa-envelope"></i>
-                        <input type="CNPJ" id="CNPJ" name="CNPJ" required>
+                        <input type="CNPJ" id="CNPJ" name="cnpj" required>
                     </div>
                 </label>
             </div>

@@ -1,7 +1,7 @@
 <?php
 
     //Inclusão da conexão
-    include("conexao.php");
+    include("../../PHP/conexao.php");
 
     //Criando variaveis para realização da consulta ao banco de dados
     $login = $_POST['cnpj'];
@@ -16,7 +16,7 @@
         //Tentando realizar consulta, o try é importante pois o erro não exibido por padrão ao usuário
         try{
             // Preparando instrução para a consulta do banco de dados
-            $query = $dbh->prepare("SELECT id,cnpj,senha FROM logincandidato WHERE cnpj=:cnpj AND senha=:senha;");
+            $query = $dbh->prepare("SELECT id,cnpj,senha FROM cadasEmpre WHERE cnpj=:cnpj AND senha=:senha;");
             $query->execute(array(
                 ':cnpj' => $login,
                 ':senha' => $senha
@@ -34,7 +34,7 @@
             }
             $_SESSION['id'] = $resultado['id'];
             $_SESSION['nome_empresa'] = $resultado['nome_empresa'];
-            header('Location: ../principalcandidato.php');
+            header('Location: ./perfilRecrutador.php');
         }
 
         }catch(Exception $e){

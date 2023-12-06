@@ -16,7 +16,7 @@
 </head>
 <body>
     <main id="container">
-        <form id="login_form" method="POST" action="./bd/validarLogin.php">
+        <form id="login_form" method="POST" action="validarlogin.php">
             <div id="form_header">
                 <h1>Login</h1>
                 

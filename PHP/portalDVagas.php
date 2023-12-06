@@ -14,15 +14,21 @@
     $paginaAtual = isset($_GET['pagina']) ? $_GET['pagina'] : 1;
 
     $localFiltro = isset($_GET['local']) ? $_GET['local'] : '';
+    $areaProfissional = isset($_GET['areaProfissional']) ? $_GET['areaProfissional'] : '';
 
     // Calcule o offset para a consulta
     $offset = ($paginaAtual - 1) * $itensPorPagina;
 
     if ($localFiltro != '') {
-        $query = $dbh->prepare('SELECT * FROM cadasVagas WHERE localVaga = :localVaga LIMIT :offset, :itensPorPagina');
+        $query = $dbh->prepare('SELECT * FROM cadasVagas WHERE localVaga = :localVaga,  LIMIT :offset, :itensPorPagina');
         $query->bindParam(':localVaga', $localFiltro, PDO::PARAM_STR);
     } else {
         $query = $dbh->prepare('SELECT * FROM cadasVagas LIMIT :offset, :itensPorPagina');
+    }
+
+    if($areaProfissional !=''){
+        $query = $dbh->prepare('SELECT * FROM cadasVagas WHERE cargo = :cargo');
+        $query->bindParam(':cargo' , $areaProfissional, PDO::PARAM_STR);
     }
 
     // Consulta para obter apenas os itens da página atual
@@ -31,6 +37,20 @@
     $query->execute();
 
     $vagas = $query->fetchAll(PDO::FETCH_ASSOC);
+
+    session_start();
+
+    
+    // Verifica se o usuário está logado
+    if (!isset($_SESSION['id'])) {
+        // Se não estiver logado, redirecione para a tela de login
+        header('Location: tela_login.php');
+        exit;
+    }
+    
+    // Agora você pode acessar o ID do usuário
+    $id_do_usuario = $_SESSION['id'];
+
 ?>
 
 <!DOCTYPE html>
@@ -59,7 +79,8 @@
         <div class="filto-to">
             <div class="filtro">
                 <h1>Filtro</h1>
-                <form method="get" action="pagina.php">
+                <h1><?php echo $id_do_usuario?></h1>
+                <form method="get" action="portalDVagas.php">
                     <select name="local" id="local" onchange="this.form.submit()">
                         <option value="" <?php echo ($localFiltro == '') ? 'selected' : ''; ?>>Todos os Locais</option>
                         <?php
@@ -68,13 +89,17 @@
                         }
                         ?>
                     </select>
+
+                    <select name="areaProfissional" id="areaProfissional" onchange="this.form.submit()">
+                    <option value="" <?php echo ($areaProfissional == '') ? 'selected' : ''; ?>>Área profissional</option>
+                    <?php
+                    foreach($vagas as $cargo){
+                        echo '<option value="' . $cargo['cargo'] . '" ' . (($areaProfissional == $cargo['cargo']) ? 'selected' : '') . '>' . $cargo[''] . '</option>';
+                    }
+                    ?>
+                    </select>
                 </form>
 
-                <select name="" id="">
-                    <option value="">Área profissional</option>
-                    <option value="">Área profissional</option>
-                    <option value="">Área profissional</option>
-                </select>
                 <select name="" id="">
                     <option value="">Faixa Salarial</option>
                     <option value="">Faixa Salarial</option>
