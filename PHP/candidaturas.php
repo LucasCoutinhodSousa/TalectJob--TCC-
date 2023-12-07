@@ -22,6 +22,8 @@
 
     $id_do_usuario = $query->fetchAll();
 
+
+
 ?>
 
 <!DOCTYPE html>
