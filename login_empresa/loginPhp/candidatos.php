@@ -9,38 +9,26 @@ if (!isset($_SESSION['id'])) {
 
 $id_Empresa = $_SESSION['id'];
 
-// Consulta para obter o total de resultados
-$totalQuery = $dbh->prepare('SELECT COUNT(*) AS total FROM vw_visualizarEmp WHERE id = :id_Empresa');
-$totalQuery->execute(array(':id_Empresa' => $id_Empresa));
-$totalResult = $totalQuery->fetch();
-$totalItens = $totalResult['total'];
+    $id_Empresa = $_SESSION['id'];
+    $busca = "SELECT * FROM vw_visualizarEmp WHERE id=:id_Empresa";
 
-// Número de itens por página
-$itensPorPagina = 3;
+    if(!empty($_GET['pesquisar']))
+    {
+        $data = $_GET['pesquisar'];
+        $busca .= " OR nome LIKE :data";
+    }
 
-// Página atual
-$paginaAtual = isset($_GET['pagina']) ? $_GET['pagina'] : 1;
+    $query = $dbh->prepare($busca);
 
-// Calcular o offset
-$offset = ($paginaAtual - 1) * $itensPorPagina;
+    if(!empty($data)) {
+        $query->bindValue(':data', "%$data%", PDO::PARAM_STR);
+    }
 
-// Consulta com paginação
-$query = $dbh->prepare('SELECT * FROM vw_visualizarEmp WHERE id = :id_Empresa LIMIT :offset, :itensPorPagina');
-$query->bindValue(':id_Empresa', $id_Empresa, PDO::PARAM_INT);
-$query->bindValue(':offset', $offset, PDO::PARAM_INT);
-$query->bindValue(':itensPorPagina', $itensPorPagina, PDO::PARAM_INT);
-$query->execute();
-$resultados = $query->fetchAll();
+    $query->bindValue(':id_Empresa', $id_Empresa, PDO::PARAM_INT);
 
-// Calcular o número total de páginas
-$totalPaginas = ceil($totalItens / $itensPorPagina);
+    $query->execute();
 
-if(!empty($_GET['search'])){
-    
-    echo 'contem algo, pesqusar';
-}else{
-    echo 'não contem nada';
-}
+    $id_Empresa = $query->fetchAll();
 ?>
 
 <!DOCTYPE html>
@@ -59,8 +47,9 @@ if(!empty($_GET['search'])){
     </header>
     <div class="conteiner">
         <div class="filtro">
-            <form action="">
-                <input type="search" name="" id="pesquisar" placeholder="Nome">
+            <form action="candidatos.php" method="get">
+                <input type="search" name="pesquisar" id="pesquisar" placeholder="Nome">
+                <button type="submit"><img src="../../img/pesquisa.png" alt=""></button>
                 <select name="" id="">
                     <option value="">Local</option>
                 </select>
@@ -71,35 +60,30 @@ if(!empty($_GET['search'])){
         </div>
         <div class="candidatos">
             <?php
-            foreach ($resultados as $resultado) {
-                echo '<div class="vagas">';
-                echo '<h1>' . $resultado['nome'] . '</h1>';
-                echo '<h2>' . $resultado['localVaga'] . '</h2>';
-                echo '<h3>' . $resultado['cargo'] . '</h3>';
-                echo '</div>';
-            }
-            ?>
-        </div>
-        <div class="pagination">
-            <?php
-            for ($i = 1; $i <= $totalPaginas; $i++) {
-                echo '<a href="candidatos.php?pagina=' . $i . '">' . $i . '</a>';
-            }
+                foreach($id_Empresa as $empresa){
+                    echo '<div class="vagas">';
+                    echo '<h1>'.$empresa['nome'].'</h1>';
+                    echo '<h2>'.$empresa['localVaga'].'</h2>';
+                    echo '<h3>'.$empresa['cargo'].'</h3>';
+                    echo '</div>';
+                }
             ?>
         </div>
     </div>
 </body>
 <script>
     var search = document.getElementById('pesquisar');
-    search.addEventListener("keydown", function(event){
-        if(event.key === "Enter"){
+
+    search.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") 
+        {
             searchData();
         }
-    }
-    );
+    });
 
-    function searchData(){
-        window.location = 'candicados.php?search'+search.value;
+    function searchData()
+    {
+        window.location = 'http://localhost/TCC/login_empresa/loginPhp/candidatos.php?pesquisar='+search.value;
     }
 </script>
 </html>
