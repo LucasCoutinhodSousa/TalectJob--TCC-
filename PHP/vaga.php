@@ -27,7 +27,7 @@
     foreach($vaga as $emp){
         $idEmpre = $emp['empresaCada'];
     }
-    echo $idEmpre;
+
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Formulário foi enviado, executa a query

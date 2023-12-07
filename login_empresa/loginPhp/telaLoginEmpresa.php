@@ -59,7 +59,7 @@
                 </a>
             </div>
             <div id="cadastro">
-                <a href="a">
+                <a href="http://localhost/TCC/HTMl/cadastroEmpresa.html">
                     Cadastre-se
                 </a>
             </div>

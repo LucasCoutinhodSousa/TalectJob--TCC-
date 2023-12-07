@@ -22,7 +22,6 @@ header h1{
 
 .filtro{
     display: flex;
-    border: 1px solid red;
 }
 
 .filtro form{
@@ -76,4 +75,15 @@ header h1{
 .vagas h2{
     margin-left: 900px;
     margin-top: -40px;
+}
+
+button{
+    margin-left: -20px;
+    border: none;
+}
+
+img{
+    margin-bottom: -10px;
+    width: 30px;
+    background: white;
 }
