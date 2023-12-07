@@ -43,7 +43,7 @@ $query->execute(array(
 
     if ($query->rowCount() > 0) {
         echo 'Cadastro realizado com sucesso.';
-        header('Location: ../HTML/perfilRecrutador.html');
+        header('Location: http://localhost/TCC/login_empresa/loginPhp/perfilRecrutador.php');
         echo 'Inseridas com sucesso';
     } else {
         echo 'Erro ao cadastrar. Verifique os dados fornecidos.';

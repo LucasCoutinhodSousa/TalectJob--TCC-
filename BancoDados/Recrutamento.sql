@@ -45,7 +45,7 @@ create table cadasEmpre(
     cnpj varchar(100),
     razaoSoc varchar(100),
     nomeFant varchar(100),
-    email varchar(100) unicode not null,
+    email varchar(100) UNIQUE not null,
     estadualIns varchar(100),
     senha varchar(100), 
     cep varchar(100),
@@ -152,3 +152,5 @@ select*from cadasCand;
 select*from cadasVagas;
 select*from cadasEmpre;
 select*from candidatosVagas;
+
+

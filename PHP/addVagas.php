@@ -31,7 +31,6 @@ $query->execute(array(
     ':local' => $local,
     ':descrVaga' => $descrVaga,
     ':empresaCada' =>$id_Empresa
-
 ));
 
 echo 'Cadastrado com sucesso';

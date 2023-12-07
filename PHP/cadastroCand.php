@@ -75,7 +75,7 @@ $query->execute(array(
 
 if ($query->rowCount() > 0) {
     echo 'Cadastro realizado com sucesso.';
-    header('Location: ../HTML/perfilRecrutador.html');
+    header('Location: http://localhost/TCC/loginUsuario/phpLoginUsuario/principalcandidato.php');
     echo 'Inseridas com sucesso';
 } else {
     echo 'Erro ao cadastrar. Verifique os dados fornecidos.';
