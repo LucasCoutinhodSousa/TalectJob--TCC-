@@ -57,7 +57,7 @@
         </div>
         <div class="candidatos">
             <?php
-                foreach($busca as $empresa){
+                foreach($id_Empresa as $empresa){
                     echo '<div class="vagas">';
                     echo '<h1>'.$empresa['nome'].'</h1>';
                     echo '<h2>'.$empresa['localVaga'].'</h2>';
