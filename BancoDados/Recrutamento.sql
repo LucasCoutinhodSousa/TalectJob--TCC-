@@ -14,6 +14,8 @@ select * from logincandidato;
 
 CREATE TABLE cadasCand (
     id INT AUTO_INCREMENT PRIMARY KEY,
+    path VARCHAR(100),
+    data_upload VARCHAR(100),
     nome VARCHAR(255),
     email VARCHAR(255) unique,
     cpf VARCHAR(140),
@@ -40,6 +42,9 @@ CREATE TABLE cadasCand (
     descricao_projetos TEXT
 );
 
+alter table cadasCand add column path varchar(100);
+alter table cadasCand add column data_upload datetime;
+
 create table cadasEmpre(
 	id int auto_increment primary key unique,
     cnpj varchar(100),
@@ -55,6 +60,8 @@ create table cadasEmpre(
     estado varchar(100),
     rua varchar(100)    
 );
+
+alter table cadasEmpre add column path varchar(100);
 
 create table cadasVagas(
 	id int auto_increment primary key unique,
@@ -152,5 +159,4 @@ select*from cadasCand;
 select*from cadasVagas;
 select*from cadasEmpre;
 select*from candidatosVagas;
-
 

@@ -25,11 +25,13 @@
         <div class="conteudo-cadastro">
             <article>
                 <div class="area-cadastro">
-                    <form action="../PHP/cadastroCand.php" method="get">    
+                    <form action="../loginUsuario/phpLoginUsuario/cadastroCand.php" method="post" enctype="multipart/form-data">    
 
                         <h1>Dados Pessoais</h1>
 
                         <div class="input-group">
+
+                            <input type="file" name="perfil_f" id="perfil_f" required>
 
                             <div class="input-box">
                                 <div class="label-n"><label for="data">Nome</label></div>
@@ -186,7 +188,7 @@
                         </div>
                         <div class="input-group">
                             <div class="button">
-                                <input type="submit" value="Cadastrar">
+                                <input type="submit" value="Cadastrar" name="cadas">
                             </div>
                         </div>
                     </form>
@@ -194,3 +196,4 @@
             </article>
         </div>
     </body>
+    </html>

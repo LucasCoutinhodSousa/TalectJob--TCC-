@@ -42,6 +42,7 @@ $nome = $query->fetchAll();
             <?php
                 foreach($nome as $nome){
                     echo '<h1>'.$nome['nome'].'</h1>';
+                    echo '<img height="50" src="'.$nome['path'].'">';
                 }
             ?>
             

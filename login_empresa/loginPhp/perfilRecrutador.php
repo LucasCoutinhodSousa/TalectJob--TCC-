@@ -31,10 +31,10 @@ $nomeEmpresa = $query->fetchAll();
 <body>
     <div class="conteiner">
         <div class="perfil">
-            <img src="../img/fotoperfil.png" alt="">
             <?php
                 foreach($nomeEmpresa as $nomeEmpresa){
                     echo '<h2>Nome:'.$nomeEmpresa['nomeFant'].'</h2>';
+                    echo '<img src="'.$nomeEmpresa['path'].'">';
                 }
             ?>
 

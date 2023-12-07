@@ -24,11 +24,13 @@
         <div class="conteudo-cadastro">
             <article>
                 <div class="area-cadastro">
-                    <form action="../PHP/cadastroEmpresa.php" method="get">    
+                    <form action="../login_empresa/loginPhp/cadastroEmpresa.php" method="post" enctype="multipart/form-data">    
 
                         <h1>Dados Empresarial</h1>
 
                         <div class="input-group">
+
+                            <input type="file" name="perfil_Emp" id="perfil_Emp" required>
 
                             <div class="input-box">
                                 <div class="label-n"><label for="CNPJ">CNPJ</label></div>
