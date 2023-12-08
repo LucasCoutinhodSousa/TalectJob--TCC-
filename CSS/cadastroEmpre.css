@@ -6,7 +6,7 @@
 body{
     width: 100%;
     height: 800px;
-    font-family: "Trebuchet MS";
+    font-family: 'Nunito', sans-serif;
     background-image: linear-gradient(to right, #41155F , #1C08A7);
 }
 
