@@ -5,6 +5,8 @@
 
 body{
     font-family: 'Nunito', sans-serif;
+    width: 100%;
+    height: 100%;
 }
 
 header{
@@ -58,4 +60,18 @@ header a img{
 .cabecalho-inicial select option{
     color: black;
 }
+
+.conteiner{
+    height: 50%;
+    width: 100%;
+}
+
+.conteiner img{
+    width: 100%;
+    height: 50%;
+
+}
+
+
+
 
