@@ -52,21 +52,20 @@
 </head>
 <body>
 
-<h1><?php echo $id_do_usuario?></h1>
     <div class="vagas">
         <?php
         foreach($vaga as $vaga){
             echo '<div class="vagas">';
-            echo '<h3>'.$vaga['nomeFant'].'</h3>';
-            echo '<h1>'.$vaga['cargo'].'</h1>';
-            echo '<h2>'.$vaga['localVaga'].'</h2';
-            echo '<h1>'.$vaga['descricaoVaga'].'</h1>';
+            echo '<h1>'.$vaga['nomeFant'].'</h1>';
+            echo '<h3>Cargo: '.$vaga['cargo'].'</h3>';
+            echo '<h3>Local: '.$vaga['localVaga'].'</h3>';
+            echo '<h3>Descrição: </h3><p>'.$vaga['descricaoVaga'].'</p>';
+            echo '<form class="" action="" method="post">
+            <input type="submit" value="Candidatar">
+             </form>';
             echo '</div>';
         }
         ?>
-        <form action="" method="post">
-            <input type="submit" value="Cadastrar">
-        </form>
     </div>
 </body>
 </html>

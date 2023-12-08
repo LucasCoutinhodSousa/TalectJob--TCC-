@@ -33,7 +33,7 @@ $nomeEmpresa = $query->fetchAll();
         <div class="perfil">
             <?php
                 foreach($nomeEmpresa as $nomeEmpresa){
-                    echo '<h2>Nome:'.$nomeEmpresa['nomeFant'].'</h2>';
+                    echo '<h2>Nome: '.$nomeEmpresa['nomeFant'].'</h2>';
                     echo '<img src="'.$nomeEmpresa['path'].'">';
                 }
             ?>

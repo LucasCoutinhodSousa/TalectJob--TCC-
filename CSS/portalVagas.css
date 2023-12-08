@@ -4,6 +4,7 @@
 }
 
 body{
+    font-family: 'Nunito', sans-serif;
     background-image: linear-gradient(to right, #41155F , #1C08A7);
 }
 
@@ -13,6 +14,36 @@ body{
     height: 100%;
 }
 
+header{
+    display: flex;
+    width: 100%;
+    height: 55px;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(to right, #41155F , #1C08A7);
+    
+}
+
+header a{
+    text-decoration: none;
+    padding: 5px;
+    color: white;
+    padding-left: 50px;
+}
+
+header a img{
+    border-radius: 50px;
+    width: 50px;
+    border: 1px solid black;
+    height: 50px;
+    margin-top: 5px;
+}
+
+header h1{
+    margin: auto;
+    color: white;
+}
+
 .filto-to{
     display: flex;
     background: white;
@@ -20,7 +51,6 @@ body{
     height: 600px;
     margin-left: 50px;
     border-radius: 50px;
-    border: 1px solid red;
 }
 
 .filtro{
@@ -42,7 +72,6 @@ body{
 }
 
 .vagas-to{
-    border: 1px solid red;
     width: 100%;
 }
 
@@ -57,7 +86,6 @@ body{
     height: 170px;
     text-align: center;
     margin-right: 8px;
-    border: 1px solid red;
 }
 
 .vagas a{

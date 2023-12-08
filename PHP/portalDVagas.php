@@ -53,28 +53,21 @@ $id_do_usuario = $_SESSION['id'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/styleInicial.css">
     <link rel="stylesheet" href="../CSS/portalVagas.css">
     <title>Portal de Vagas</title>
 </head>
 
 <body>
     <header>
-        <a href=""><img src="" alt="">Logo</a>
+        <h1>Portal de Vagas</h1>
         <div class="cabecalho-inicial">
-            <a href="portalVagas.html">Portal de Vagas</a>
-            <select name="login" id="link" onchange="location = this.value;">
-                <option value="" disabled selected>Login</option>
-                <option value="loginCan.html">Login Cadidato</option>
-                <option value="http://www.youtube.com">Login Empresa</option>
-            </select>
+            <a href="../loginUsuario/phpLoginUsuario/principalcandidato.php"><img src="../img/logo.png" alt=""></a>
         </div>
     </header>
     <div class="conteiner">
         <div class="filto-to">
             <div class="filtro">
                 <h1>Filtro</h1>
-                <h1><?php echo $id_do_usuario?></h1>
                 <form method="get" action="portalDVagas.php">
                     <select name="local" id="local" onchange="this.form.submit()">
                         <option value="" <?php echo ($localFiltro == '') ? 'selected' : ''; ?>>Todos os Locais</option>

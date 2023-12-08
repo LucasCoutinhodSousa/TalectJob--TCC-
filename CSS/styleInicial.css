@@ -24,6 +24,14 @@ header a{
     padding-left: 50px;
 }
 
+header a img{
+    border-radius: 50px;
+    width: 50px;
+    border: 1px solid black;
+    height: 50px;
+    margin-top: 5px;
+}
+
 .cabecalho-inicial{
     margin: 5px;
     height: 25px;
@@ -50,3 +58,4 @@ header a{
 .cabecalho-inicial select option{
     color: black;
 }
+

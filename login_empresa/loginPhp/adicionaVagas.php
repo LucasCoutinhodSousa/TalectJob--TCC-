@@ -10,7 +10,6 @@
 
     $id_Empresa = $_SESSION['id'];
 
-    echo $id_Empresa;
 ?>
 
 <html>

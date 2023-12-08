@@ -4,19 +4,54 @@
 }
 
 body{
+    font-family: 'Nunito', sans-serif;
     background-image: linear-gradient(to right, #41155F , #1C08A7);
 }
 
+
 .conteiner{
     display: flex;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     background: white;
+    margin: auto;
+    border-radius: 50px;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    height: 55px;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(to right, #41155F , #1C08A7);
+    
+}
+
+header a{
+    text-decoration: none;
+    padding: 5px;
+    color: white;
+    padding-left: 50px;
+}
+
+header a img{
+    border-radius: 50px;
+    width: 50px;
+    border: 1px solid black;
+    height: 50px;
+    margin-top: 5px;
+}
+
+header h1{
+    margin: auto;
+    color: white;
+    margin-left: 660px;
 }
 
 .links{
     display: flex;
-    margin-left: 520px;
+    margin-left: 450px;
     margin-top: 5px;
     font-size: 15px;
 }
@@ -42,18 +77,20 @@ body{
     margin: 0 auto;
     margin-left: 100px;
     height: 652px;
+    margin: auto;
 }
 
 .vagas{
-    width: 90%;
+    width: 1200px;
     border: 2px solid black;
     margin-top: 20px;
-    margin-left: 8px;
+    margin-left: 0px;
     border-radius: 20px;
     background: white;
     height: 170px;
     text-align: center;
     margin-right: 8px;
+    
 }
 
 .vagas p{
@@ -69,6 +106,28 @@ body{
 }
 
 .vagas h2{
+    width: 300px;
+    text-align: center;
+    margin: auto;
+}
+
+.vagas h3{
     margin-left: 900px;
-    margin-top: -40px;
+    margin-top: -50px;
+}
+
+.pagination{
+    display: flex;
+    margin-left: 590px;
+    margin-top: 10px;
+}
+
+.pagination a{
+    width: 15px;
+    color: white;
+    text-decoration: none;
+    background: #41155F;
+    text-align: center;
+    border-radius: 15px;
+    margin-left: 8px;
 }
