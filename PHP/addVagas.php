@@ -33,6 +33,10 @@ $query->execute(array(
     ':empresaCada' =>$id_Empresa
 ));
 
-echo 'Cadastrado com sucesso';
+if($query->rowCount() > 0){
+    die('Realizado com Sucesso');
+    
+}
+
 
 ?>

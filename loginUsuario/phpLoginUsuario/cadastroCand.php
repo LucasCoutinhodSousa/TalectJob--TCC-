@@ -6,7 +6,7 @@ if (isset($_FILES['perfil_f'])) {
     if($arquivo['size'] > 5242880)
         die("Arquivo muito grande");
     
-    $pasta = 'C:\Users\Lucas\Documents\Xampp-Atua\htdocs\TCC\fotoPerfil/';
+    $pasta = '../../fotoPerfil/';
     $nomeDoArquivo = $arquivo['name'];
     $novoNomeDoArquivo = uniqid();
     $extesao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION));

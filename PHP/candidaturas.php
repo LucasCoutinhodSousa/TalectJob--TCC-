@@ -10,29 +10,29 @@ if (!isset($_SESSION['id'])) {
 $id_do_usuario = $_SESSION['id'];
 
 // Configurações de paginação
-$registrosPorPagina = 3;  // Ajuste conforme necessário
+$registrosPorPagina = 4;  // Ajuste conforme necessário
 $paginaAtual = isset($_GET['pagina']) ? $_GET['pagina'] : 1;
 $offset = ($paginaAtual - 1) * $registrosPorPagina;
-
+$id_usuario ="";
 // Obtém o total de registros
 $queryCount = $dbh->prepare('SELECT COUNT(*) as total FROM vw_visualizaCand WHERE id=:id_do_usuario');
 $queryCount->bindValue(':id_do_usuario', $id_do_usuario, PDO::PARAM_INT);
 $queryCount->execute();
 $totalRegistros = $queryCount->fetch(PDO::FETCH_ASSOC)['total'];
-
+$idUsuario = $queryCount->fetchAll();
 // Calcula o número total de páginas
 $totalPaginas = ceil($totalRegistros / $registrosPorPagina);
 
 // Verifica se o número total de páginas é maior que 1
-if ($totalPaginas > 1) {
+if ($totalPaginas >= 1) {
     $query = $dbh->prepare('SELECT * FROM vw_visualizaCand WHERE id=:id_do_usuario LIMIT :offset, :registrosPorPagina');
     $query->bindValue(':id_do_usuario', $id_do_usuario, PDO::PARAM_INT);
     $query->bindValue(':offset', $offset, PDO::PARAM_INT);
     $query->bindValue(':registrosPorPagina', $registrosPorPagina, PDO::PARAM_INT);
     $query->execute();
-
-    $id_do_usuario = $query->fetchAll();
+    $id_usuario = $query->fetchAll();
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -58,7 +58,7 @@ if ($totalPaginas > 1) {
                 <a href="" class="linha">Finalizada</a>
             </div>
             <?php
-            foreach ($id_do_usuario as $usuario) {
+            foreach ($id_usuario as $usuario) {
                 echo '<div class="vagas">';
                 echo '<h1>' . $usuario['nomeFant'] . '</h1>';
                 echo '<h2>' . $usuario['cargo'] . '</h2>';

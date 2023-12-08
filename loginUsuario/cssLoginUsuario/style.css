@@ -6,13 +6,12 @@
     --collor-dark-50: #797984;
     --color-dark-100: #31d=2d37;
     --color-dark-900: #000;
-
-    --color-purple-50: #7c3aed;
-    --color-purple-100: #a855f7;
-    --color-purple-200: #bf46ef;
+    --color-dark-m: #41155F;
+    --color-dark-m: #1C08A7;
+   
 
     --collor-gradient: linear-gradient(90deg, var(--color-purple-50), var(--color-purple-100), var(--color-purple-200))
-
+     linear-gradient(to right, #41155F , #1C08A7);
 }
 
 *{
@@ -26,7 +25,7 @@
 #container {
     height: 100vh;
     width: 100%;
-    background: var(--collor-gradient);
+    background:linear-gradient(to right, #41155F , #1C08A7);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -134,7 +133,7 @@
 
 #login_button {
     border: none;
-    background: var(--collor-gradient);
+    background: linear-gradient(to right, #41155F , #1C08A7);
     color: var(--collor-light-50);
     padding: 7px;
     font-size: 18px;
