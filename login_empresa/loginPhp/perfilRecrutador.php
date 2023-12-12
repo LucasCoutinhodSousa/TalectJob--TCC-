@@ -41,9 +41,6 @@ $nomeEmpresa = $query->fetchAll();
         </div>
         <div class="acessos">
             <div class="botoes">
-                <a href="">Vagas Abertas</a>
-            </div>
-            <div class="botoes">
                 <a href="../loginPhp/adicionaVagas.php">Adicionar Vagas</a>
             </div>
             <div class="botoes">

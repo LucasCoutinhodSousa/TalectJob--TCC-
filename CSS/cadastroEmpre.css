@@ -70,7 +70,7 @@ header{
     padding-top: 50px;
     display: block;
     width: 89%;
-    height: 720px; /*altura do site*/
+    height: 820px; /*altura do site*/
     margin: 0 auto 0 auto;
     margin-top: 10px;
     border-radius: 60px;
@@ -84,7 +84,7 @@ article{
 
 .area-cadastro{
     margin: auto;
-    height: 720px; /*altura do site*/
+    height: 800px; /*altura do site*/
     width: 1320;
 }
 
@@ -172,4 +172,8 @@ hr{
 
 .area-cadastro h1{
     margin-bottom: 10px;
+}
+
+.foto_perfil{
+    margin-left: 250px;
 }

@@ -55,6 +55,7 @@ header a img{
     background-image: linear-gradient(to right, #41155F , #1C08A7);
     text-align: center;
     color: white;
+    border: none;
 }
 
 .cabecalho-inicial select option{
@@ -62,15 +63,16 @@ header a img{
 }
 
 .conteiner{
-    height: 50%;
-    width: 100%;
 }
 
-.conteiner img{
+#inical img{
     width: 100%;
-    height: 50%;
-
+    height: 682px;
 }
+
+
+
+
 
 
 

@@ -10,7 +10,7 @@ if (!isset($_SESSION['id'])) {
 $id_do_usuario = $_SESSION['id'];
 
 // Configurações de paginação
-$registrosPorPagina = 4;  // Ajuste conforme necessário
+$registrosPorPagina = 3;  // Ajuste conforme necessário
 $paginaAtual = isset($_GET['pagina']) ? $_GET['pagina'] : 1;
 $offset = ($paginaAtual - 1) * $registrosPorPagina;
 $id_usuario ="";

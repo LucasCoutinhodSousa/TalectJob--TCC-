@@ -153,6 +153,9 @@ article{
     width: 135px;
     margin-right: 8px;
     border-radius: 15px;
+    background-color: #41155F;
+    color: white;
+    border: none;
 }
 .label-n{
     display: inline;
@@ -168,4 +171,8 @@ article{
 hr{
     width: 89%;
     margin-left: 65px;
+}
+
+.foto_perfil{
+    margin-left: 250px;
 }

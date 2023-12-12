@@ -7,20 +7,24 @@
     <title>Tela Inicial</title>
 </head>
 <body>
-    
-    <header>
-        <a href=""><img src="img/logo.png" alt=""></a>
-        <div class="cabecalho-inicial">
-            <a href="portalVagas.html">Portal de Vagas</a>
-                <select name="login" id="link" onchange="location = this.value;">
-                    <option value="" disabled selected>Login</option>
-                    <option value="http://localhost/TCC/loginUsuario/phpLoginUsuario/loginUsuario.php">Login Candidato</option>
-                    <option value="http://localhost/TCC/login_empresa/loginPhp/telaLoginEmpresa.php">Login Empresa</option>
-                </select>
-            </a>
+    <div class="base">
+        <header>
+            <a href=""><img src="img/logo.png" alt=""></a>
+            <div class="cabecalho-inicial">
+                
+                    <select name="login" id="link" onchange="location = this.value;">
+                        <option value="" disabled selected>Login</option>
+                        <option value="http://localhost/TCC/loginUsuario/phpLoginUsuario/loginUsuario.php">Login Candidato</option>
+                        <option value="http://localhost/TCC/login_empresa/loginPhp/telaLoginEmpresa.php">Login Empresa</option>
+                    </select>
+                </a>
+            </div>
+        </header>
+        <div class="conteiner">
+            <div id="inical">
+                <img src="img/inicial.jpg" alt="">
+            </div>
         </div>
-    </header>
-    <div class="conteiner">
-        <img src="img/inicial.jpg" alt="">
+    </div>
 </body>
 </html>

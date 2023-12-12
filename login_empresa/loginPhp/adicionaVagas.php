@@ -21,21 +21,6 @@
         <title>Login</title>
     </head>
     <body>
-        <header>
-            <div class="logo">
-                <a href="http://"><img src="../IMG/logo.png" alt=""></a>
-            </div>
-            <div class="espacamento">
-
-            </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="">Relatorios</a>
-                    </li>
-                </ul>
-                <a href="http://"><img src="../IMG/logo.png" alt=""></a>
-            </div>
-        </header>
         <div class="conteudo-cadastro">
             <article>
                 <div class="area-cadastro">
